@@ -7,7 +7,7 @@
                     <div class="islemag-footer-content">
                         <p>{dede:global.cfg_powerby/}</p>
                         <address>
-                            Visit us: <a href="#">{dede:global.cfg_basehost/}</a><br/>
+                            Visit us: <a href="{dede:global.cfg_basehost/}"></a><br/>
                             Email: <a href="mailto:test@test.com">{dede:global.cfg_adminemail/}</a><br/>
                             <br/>
                             <abbr title="copyright">© Themeisle</abbr>
@@ -17,7 +17,7 @@
 
                 <div itemscope itemtype="http://schema.org/WPSideBar" class="col-md-3 col-sm-12"
                      id="sidebar-widgets-area-1" aria-label="Widgets Area 1">
-                    <div id="tag_cloud-4" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3>
+                    <div id="tag_cloud-4" class="widget widget_tag_cloud"><h3 class="widget-title">热门标签</h3>
                         <div class="tagcloud">
                             {dede:tag sort='rand' row='20' getall='1'}
                             <a href='[field:link/]' class="tag-cloud-link tag-link-118 tag-link-position-1"
@@ -42,68 +42,58 @@
                         </div>
                     </div>
                 </div>
-                <div itemscope itemtype="http://schema.org/WPSideBar" role="complementary" id="sidebar-widgets-area-3"
-                     class="col-md-3 col-sm-12" aria-label="Widgets Area 3">
+                <div itemscope itemtype="http://schema.org/WPSideBar" role="complementary" id="sidebar-widgets-area-3" class="col-md-3 col-sm-12" aria-label="Widgets Area 3">
                     <div id="pirate_forms_contact_widget-2" class="widget construct">
-                        <div class="pirate-forms-contact-widget"><h3 class="widget-title">Contact us</h3>
-
+                        <div class="pirate-forms-contact-widget">
+                            <h3 class="widget-title">联系我们</h3>
                             <div class="pirate_forms_wrap">
-
-                                <form method="post" enctype="application/x-www-form-urlencoded"
-                                      class="pirate_forms widget-on form_honeypot-on pirate_forms_from_widget-on pirate-forms-contact-name-on pirate-forms-contact-email-on pirate-forms-contact-subject-on pirate-forms-contact-message-on pirate-forms-contact-submit-on pirate-forms-contact-referrer-on">
+                                <form method="post" enctype="application/x-www-form-urlencoded" class="pirate_forms widget-on form_honeypot-on pirate_forms_from_widget-on pirate-forms-contact-name-on pirate-forms-contact-email-on pirate-forms-contact-subject-on pirate-forms-contact-message-on pirate-forms-contact-submit-on pirate-forms-contact-referrer-on">
                                     <div class="pirate_forms_three_inputs_wrap">
                                         <div class="col-xs-12 col-sm-4 contact_name_wrap pirate_forms_three_inputs form_field_wrap">
                                             <input type="text" id="pirate-forms-contact-name"
                                                    name="pirate-forms-contact-name" class="form-control"
-                                                   placeholder="Your Name" required
-                                                   oninvalid="this.setCustomValidity('Enter your name')"
+                                                   placeholder="姓名" required
+                                                   oninvalid="this.setCustomValidity('请输入姓名')"
                                                    onchange="this.setCustomValidity('')" value=""></div>
                                         <div class="col-xs-12 col-sm-4 contact_email_wrap pirate_forms_three_inputs form_field_wrap">
                                             <input type="email" id="pirate-forms-contact-email"
                                                    name="pirate-forms-contact-email" class="form-control"
-                                                   placeholder="Your Email" required
-                                                   oninvalid="this.setCustomValidity('Enter a valid email')"
+                                                   placeholder="邮箱" required
+                                                   oninvalid="this.setCustomValidity('请输入邮箱')"
                                                    onchange="this.setCustomValidity('')" value=""></div>
                                         <div class="col-xs-12 col-sm-4 contact_subject_wrap pirate_forms_three_inputs form_field_wrap">
                                             <input type="text" id="pirate-forms-contact-subject"
                                                    name="pirate-forms-contact-subject" class="form-control"
-                                                   placeholder="Subject" required
-                                                   oninvalid="this.setCustomValidity('Please enter a subject')"
+                                                   placeholder="标题" required
+                                                   oninvalid="this.setCustomValidity('请输入标题')"
                                                    onchange="this.setCustomValidity('')" value=""></div>
                                     </div>
-                                    <div class="col-xs-12 form_field_wrap contact_message_wrap  "><textarea rows=5
-                                                                                                            cols=30
-                                                                                                            id="pirate-forms-contact-message"
-                                                                                                            name="pirate-forms-contact-message"
-                                                                                                            class="form-control"
-                                                                                                            placeholder="Your message"
-                                                                                                            required
-                                                                                                            oninvalid="this.setCustomValidity('Enter your question or comment')"
-                                                                                                            onchange="this.setCustomValidity('')"></textarea>
+                                    <div class="col-xs-12 form_field_wrap contact_message_wrap  ">
+                                        <textarea rows=5
+                                                  cols=30
+                                                  id="pirate-forms-contact-message"
+                                                  name="pirate-forms-contact-message"
+                                                  class="form-control"
+                                                  placeholder="内容" required
+                                                  oninvalid="this.setCustomValidity('请输入内容')"
+                                                  onchange="this.setCustomValidity('')"></textarea>
                                     </div>
                                     <div class="col-xs-12 col-sm-6 form_field_wrap contact_submit_wrap">
                                         <button type="submit" id="pirate-forms-contact-submit"
                                                 name="pirate-forms-contact-submit"
-                                                class="pirate-forms-submit-button btn btn-primary" placeholder="">Send
-                                            Message
-                                        </button>
+                                                class="pirate-forms-submit-button btn btn-primary" placeholder="">提交</button>
                                     </div>
-                                    <div class="form_field_wrap hidden" style="display: none"><input type="text"
-                                                                                                     id="form_honeypot"
-                                                                                                     name="honeypot"
-                                                                                                     class=""
-                                                                                                     placeholder=""
-                                                                                                     value=""></div>
-                                    <input type="hidden" id="pirate_forms_from_widget" name="pirate_forms_from_widget"
-                                           class="" placeholder="" value="1"><input type="hidden"
-                                                                                    id="pirate-forms-contact-referrer"
-                                                                                    name="pirate-forms-contact-referrer"
-                                                                                    class="" placeholder=""
-                                                                                    value="https://themeisle.com/demo/?theme=IsleMag">
+                                    <div class="form_field_wrap hidden" style="display: none">
+                                        <input type="text"
+                                               id="form_honeypot"
+                                               name="honeypot"
+                                               class=""
+                                               placeholder=""
+                                               value="">
+                                    </div>
                                 </form>
                                 <div class="pirate_forms_clearfix"></div>
                             </div>
-
                             <div class="pirate_forms_clearfix"></div>
                         </div>
                     </div>

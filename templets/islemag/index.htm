@@ -103,7 +103,6 @@
     {dede:include filename="head.htm"/}
 
     <div id="content" class="site-content">
-
         <div class="islemag-top-container">
             <div class="owl-carousel islemag-top-carousel rect-dots">
                 {dede:arclist flag='c' row='6' orderby='pubdate'}
@@ -114,7 +113,7 @@
                                 <img class="owl-lazy" data-src="[field:litpic/]" />
                             </a>
                         </figure>
-                    </div><!-- End .entry-media -->
+                    </div>
 
                     <div class="entry-overlay-meta">
                         <h2 class="entry-title"><a href="[field:arcurl/]" rel="bookmark">[field:title/]</a></h2><span class="entry-overlay-date"><i class="fa fa-calendar"></i>[field:pubdate function="MyDate('m-d',@me)"/]</span>
@@ -122,20 +121,17 @@
                         <a href="[field:arcurl/]" class="entry-comments"><i class="fa fa-eye"></i>[field:click/]</a>
                         <span class="entry-separator">/</span>
                         <a href="[field:arcurl/]" class="entry-author"><i class="fa fa-user"></i>[field:source/]</a>
-                    </div><!-- End .entry-overlay-meta -->
+                    </div>
                 </article>
                 {/dede:arclist}
-            </div><!-- End .islemag-top-carousel -->
-        </div><!-- End .islemag-top-container -->
+            </div>
+        </div>
 
 
         <div class="container">
             <div class="row">
-
-                <div
-                        class="islemag-content-left col-md-9">
-                    <div class="islemag-section
-	1	">
+                <div class="islemag-content-left col-md-9">
+                    <div class="islemag-section">
                         <h2 class="title-border title-bg-line orange mb30">
                             <span>News</span>
                         </h2>
