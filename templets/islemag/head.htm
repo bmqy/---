@@ -1,0 +1,92 @@
+<header id="header" class="site-header" role="banner">
+    <div class="navbar-top container-fluid">
+        <div class="navbar-left social-icons">
+            <a href="#" class="social-icon"><i class="fa fa-facebook-official"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-wordpress"></i></a>
+            <a class="social-icon"><i class="fa fa-linkedin"></i></a>
+            <a class="social-icon"><i class="fa fa-instagram"></i></a>
+        </div>
+        <button type="button" class="navbar-btn"><i class="fa fa-search"></i></button>
+
+        <div class="navbar-right">
+            <div id="navbar" class="navbar">
+                <nav id="top-navigation" class="navigation top-navigation" role="navigation">
+                    <button class="menu-toggle">Menu</button>
+                    <a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>
+                    <div class="menu-top-navbar-container">
+                        <ul id="primary-menu" class="nav-menu">
+                            <li id="menu-item-3502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3502"><a href="https://demo.themeisle.com/islemag/faq/">FAQ</a></li>
+                            <li id="menu-item-255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a href="https://demo.themeisle.com/islemag/contact/">Contact Us</a></li>
+                            <li id="menu-item-3501" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3501"><a href="https://demo.themeisle.com/islemag/advertisement/">About</a></li>
+                        </ul>
+                    </div>
+                </nav><!-- #site-navigation -->
+            </div><!-- #navbar -->
+        </div>
+        <div class="navbar-white top" id="header-search-form">
+            <form class="navbar-form" role="search" name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+                <span class="screen-reader-text">Search for:</span>
+                <input type="hidden" name="kwtype" value="0" />
+                <input type="search" id="s" name="q" class="form-control" placeholder="在这里搜索..." title="在这里搜索...">
+                <button type="submit" title="Search"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="header-content clearfix">
+        <div class="col-md-3 col-sm-3 col-xs-12 navbar-brand">
+            <a href="{dede:global.cfg_basehost/}" class="custom-logo-link" rel="home" itemprop="url"><img width="166" height="97" src="{dede:global.cfg_templets_skin/}/img/logo2.png" class="custom-logo" alt="{dede:global.cfg_webname/}" itemprop="logo"/></a>
+            <div class="header-logo-wrap text-header islemag_only_customizer"><h1 itemprop="headline" id="site-title" class="site-title"><a href="{dede:global.cfg_basehost/}" title="{dede:global.cfg_webname/}" rel="home">{dede:global.cfg_webname/}</a></h1>
+                <p itemprop="description" id="site-description" class="site-description">{dede:global.cfg_description/}</p></div>
+        </div>
+
+        <div class="col-md-9 col-sm-9 col-xs-12 islemag-banner">
+            <div id="islemag_content_ad-widget-3" class="widget islemag_content_ad">
+                <div class="islemag-ad-banner-content"><a href="https://www.themeisle.com" target="_blank"><img
+                        src="{dede:global.cfg_templets_skin/}/img/banner_placeholder.png"/></a></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="navbar" class="navbar
+			">
+        <nav id="site-navigation" class="navigation main-navigation" role="navigation">
+            <button class="menu-toggle">Menu</button>
+            <a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>
+            <div class="menu-main-menu-container">
+                <ul id="primary-menu" class="nav-menu">
+                    <li id="menu-item-336"
+                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-336">
+                        <a href="https://demo.themeisle.com/islemag/"><i class="_mi dashicons dashicons-admin-home" aria-hidden="true" style="font-size:2em;"></i><span class="visuallyhidden">Home</span></a>
+                    </li>
+
+                    {dede:channelartlist type='top' row='10' currentstyle="<li class='menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>"}
+                    {dede:field name=typeid runphp="yes"}
+                    global $dsql; $sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+                    $row = $dsql->GetOne($sql);
+                    @me=is_array($row)?'<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children">':'<li class="menu-item menu-item-type-taxonomy menu-item-object-category">';
+                    {/dede:field}
+                        <a href='{dede:field name="typeurl"/}' {dede:field name="rel"/}><span>{dede:field name="typename"/}</span></a>
+                        {dede:field name=typeid runphp="yes"}
+                        global $dsql; $sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+                        $row = $dsql->GetOne($sql);
+                        @me=is_array($row)?'<ul class="sub-menu">':'';
+                        {/dede:field}
+
+                        {dede:channel type='son' noself='yes' }
+                        <li id="menu-item-[field:id/]" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-[field:id/]"><a href="[field:typeurl/]">[field:typename/]</a></li>
+                        {/dede:channel}
+
+                        {dede:field name=typeid runphp="yes"}
+                        global $dsql; $sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+                        $row = $dsql->GetOne($sql);
+                        @me=is_array($row)?'</ul>':'';
+                        {/dede:field}
+                    </li>
+                    {/dede:channelartlist}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
