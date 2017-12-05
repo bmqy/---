@@ -49,19 +49,23 @@
         </div>
     </div>
 
-    <div id="navbar" class="navbar
-			">
+    <div id="navbar" class="navbar">
         <nav id="site-navigation" class="navigation main-navigation" role="navigation">
             <button class="menu-toggle">Menu</button>
             <a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>
             <div class="menu-main-menu-container">
                 <ul id="primary-menu" class="nav-menu">
-                    <li id="menu-item-336"
-                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-336">
-                        <a href="https://demo.themeisle.com/islemag/"><i class="_mi dashicons dashicons-admin-home" aria-hidden="true" style="font-size:2em;"></i><span class="visuallyhidden">Home</span></a>
+                    {dede:field name='typeid' runphp='yes'}
+                    if(){
+                    }
+                    else{
+                    }
+                    {/dede:field}
+                    <li id="menu-item-0" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-0">
+                        <a href="{dede:global.cfg_basehost/}"><i class="_mi dashicons dashicons-admin-home" aria-hidden="true" style="font-size:2em;"></i><span class="visuallyhidden">首页</span></a>
                     </li>
 
-                    {dede:channelartlist type='top' row='10' currentstyle="<li class='menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>"}
+                    {dede:channelartlist typeid='top' row='10' currentstyle="<li class='menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>"}
                     {dede:field name=typeid runphp="yes"}
                     global $dsql; $sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
                     $row = $dsql->GetOne($sql);
