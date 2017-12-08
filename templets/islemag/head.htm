@@ -55,23 +55,17 @@
             <a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>
             <div class="menu-main-menu-container">
                 <ul id="primary-menu" class="nav-menu">
-                    {dede:field name='typeid' runphp='yes'}
-                    if(){
-                    }
-                    else{
-                    }
-                    {/dede:field}
                     <li id="menu-item-0" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-0">
                         <a href="{dede:global.cfg_basehost/}"><i class="_mi dashicons dashicons-admin-home" aria-hidden="true" style="font-size:2em;"></i><span class="visuallyhidden">首页</span></a>
                     </li>
 
-                    {dede:channelartlist typeid='top' row='10' currentstyle="<li class='menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>"}
+                    {dede:channelartlist typeid='top' row='10'}
                     {dede:field name=typeid runphp="yes"}
                     global $dsql; $sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
                     $row = $dsql->GetOne($sql);
                     @me=is_array($row)?'<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children">':'<li class="menu-item menu-item-type-taxonomy menu-item-object-category">';
                     {/dede:field}
-                        <a href='{dede:field name="typeurl"/}' {dede:field name="rel"/}><span>{dede:field name="typename"/}</span></a>
+                        <a href='{dede:field name="typeurl"/}' {dede:field name="rel"/}><span>111{dede:field name="typename"/}</span></a>
                         {dede:field name=typeid runphp="yes"}
                         global $dsql; $sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
                         $row = $dsql->GetOne($sql);
