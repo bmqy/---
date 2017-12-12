@@ -159,7 +159,6 @@ if ( ! function_exists('GetDateMk'))
     }
 }
 
-
 /**
  *  将时间转换为距离现在的精确时间
  *

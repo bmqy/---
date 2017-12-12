@@ -35,12 +35,10 @@
     <script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/jquery.js'></script>
     <script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/jquery-migrate.min.js'></script>
     <script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/gtm4wp-form-move-tracker.js'></script>
-    <!-- Google Tag Manager for WordPress by DuracellTomi - http://duracelltomi.com -->
     <script data-cfasync="false" type="text/javascript">
         var gtm4wp_datalayer_name = "dataLayer";
         var dataLayer = dataLayer || [];
     </script>
-    <!-- End Google Tag Manager for WordPress by DuracellTomi -->
     <style type="text/css">
         body.custom-background {
             background-image: url("{dede:global.cfg_templets_skin/}/img/islemag-background.jpg");
@@ -106,116 +104,30 @@
             <div class="row">
                 <div class="islemag-content-left col-md-9">
                     <header class="page-header">
-                        <h1 class="page-title">Category: Technology</h1>
+                        <h1 class="page-title">栏目：{dede:field.title/}</h1>
                     </header>
-                    <!-- .page-header -->
+                    {dede:list pagesize='5'}
                     <article id="post-2342" class="entry post-2342 post type-post status-publish format-standard has-post-thumbnail hentry category-technology">
                         <div class="entry-media">
                             <figure>
-                                <a href="https://demo.themeisle.com/islemag/2016/04/20/selfie/">
-                                    <img width="595" height="397" src="picture/1058_min_snguj4.jpg" class="attachment-islemag_blog_post_no_crop size-islemag_blog_post_no_crop wp-post-image" alt="" />
-                                </a>
+                                [field:array runphp='yes']@me = (empty(@me['litpic']) ? "" : "<a href='{@me['arcurl']}'><img width='595' height='397' src='{@me['litpic']}'/ ></a>"); [/field:array]
                             </figure>
                         </div>
-                        <!-- End .entry-media --> <span class="entry-date">20           <span>APR</span></span>
-                        <h2 class="entry-title"><a href="https://demo.themeisle.com/islemag/2016/04/20/selfie/"
-                                                   rel="bookmark">Why Do People Think Apple iMacs are a Good Idea?</a>
-                        </h2>
+                        <span class="entry-date">[field:pubdate function="MyDate('d',@me)/] <span>[field:pubdate function="MyDate('Y-m',@me)"/]</span></span>
+                        <h2 class="entry-title"><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
 
                         <div class="entry-content">
-                            <p>One of the things I have found myself needing over and over again as I design websites is “dummy text” or “filler text”, that looks like real content, that I can use to fill up a page so it gives the client the feel of a finished
-                                page, text and all. Filler text matters because […]</p>
+                            <p>[field:description/]...</p>
                         </div>
-                        <!-- .entry-content -->
-                        <footer class="entry-footer"><span class="cat-links">Posted in: <a
-                                href="https://demo.themeisle.com/islemag/category/technology/" rel="category tag">Technology</a></span><span class="comments-link"><a
-                                href="https://demo.themeisle.com/islemag/2016/04/20/selfie/#respond">Leave a comment</a></span><a href="https://demo.themeisle.com/islemag/author/codeinwp/" title="themeisle" class="vcard author"><strong class="fn">themeisle</strong></a>
 
-                            <time
-                                    class="date updated published" datetime="2016-04-20T14:03:31+00:00">April 20, 2016</time>
+                        <footer class="entry-footer">
+                            <span class="cat-links">所属分类: <a href="[field:typeurl/]" rel="category tag">[field:typename/]</a></span>
+                            <span class="comments-link"><a href="[field:arcurl/]#comments">发表评论</a></span>
                         </footer>
                     </article>
-                    <article id="post-2334" class="entry post-2334 post type-post status-publish format-standard has-post-thumbnail hentry category-technology">
-                        <div class="entry-media">
-                            <figure>
-                                <a href="https://demo.themeisle.com/islemag/2016/04/20/running-girl/">
-                                    <img width="644" height="430" src="picture/14117388838_312235b9b0_c_vdnu9w.jpg" class="attachment-islemag_blog_post_no_crop size-islemag_blog_post_no_crop wp-post-image" alt="" />
-                                </a>
-                            </figure>
-                        </div>
-                        <!-- End .entry-media --> <span class="entry-date">20           <span>APR</span></span>
-                        <h2 class="entry-title"><a href="https://demo.themeisle.com/islemag/2016/04/20/running-girl/"
-                                                   rel="bookmark">New! A Stain Remover That Works Like Magic</a></h2>
-
-                        <div class="entry-content">
-                            <p>One of the things I have found myself needing over and over again as I design websites is “dummy text” or “filler text”, that looks like real content, that I can use to fill up a page so it gives the client the feel of a finished
-                                page, text and all. Filler text matters because […]</p>
-                        </div>
-                        <!-- .entry-content -->
-                        <footer class="entry-footer"><span class="cat-links">Posted in: <a
-                                href="https://demo.themeisle.com/islemag/category/technology/" rel="category tag">Technology</a></span><span class="comments-link"><a
-                                href="https://demo.themeisle.com/islemag/2016/04/20/running-girl/#respond">Leave a comment</a></span><a href="https://demo.themeisle.com/islemag/author/codeinwp/" title="themeisle" class="vcard author"><strong class="fn">themeisle</strong></a>
-
-                            <time
-                                    class="date updated published" datetime="2016-04-20T13:55:03+00:00">April 20, 2016</time>
-                        </footer>
-                    </article>
-                    <article id="post-2320" class="entry post-2320 post type-post status-publish format-standard has-post-thumbnail hentry category-technology">
-                        <div class="entry-media">
-                            <figure>
-                                <a href="https://demo.themeisle.com/islemag/2016/04/20/center-bar/">
-                                    <img width="645" height="430" src="picture/15247457825_2e183c1e88_b_hpddw9.jpg" class="attachment-islemag_blog_post_no_crop size-islemag_blog_post_no_crop wp-post-image" alt="" />
-                                </a>
-                            </figure>
-                        </div>
-                        <!-- End .entry-media --> <span class="entry-date">20           <span>APR</span></span>
-                        <h2 class="entry-title"><a href="https://demo.themeisle.com/islemag/2016/04/20/center-bar/"
-                                                   rel="bookmark">16 Reasons the Amish Were Right About Samsung
-                            Galaxy</a></h2>
-
-                        <div class="entry-content">
-                            <p>One of the things I have found myself needing over and over again as I design websites is “dummy text” or “filler text”, that looks like real content, that I can use to fill up a page so it gives the client the feel of a finished
-                                page, text and all. Filler text matters because […]</p>
-                        </div>
-                        <!-- .entry-content -->
-                        <footer class="entry-footer"><span class="cat-links">Posted in: <a
-                                href="https://demo.themeisle.com/islemag/category/technology/" rel="category tag">Technology</a></span><span class="comments-link"><a
-                                href="https://demo.themeisle.com/islemag/2016/04/20/center-bar/#respond">Leave a comment</a></span><a href="https://demo.themeisle.com/islemag/author/codeinwp/" title="themeisle" class="vcard author"><strong class="fn">themeisle</strong></a>
-
-                            <time
-                                    class="date updated published" datetime="2016-04-20T13:44:26+00:00">April 20, 2016</time>
-                        </footer>
-                    </article>
-                    <article id="post-37" class="entry post-37 post type-post status-publish format-standard has-post-thumbnail hentry category-technology tag-ocean tag-water">
-                        <div class="entry-media">
-                            <figure>
-                                <a href="https://demo.themeisle.com/islemag/2015/12/17/rationem-everti/">
-                                    <img width="345" height="430" src="picture/6944588351_fe281ef76f_c_b8v45e.jpg" class="attachment-islemag_blog_post_no_crop size-islemag_blog_post_no_crop wp-post-image" alt="" />
-                                </a>
-                            </figure>
-                        </div>
-                        <!-- End .entry-media --> <span class="entry-date">17           <span>DEC</span></span>
-                        <h2 class="entry-title"><a href="https://demo.themeisle.com/islemag/2015/12/17/rationem-everti/"
-                                                   rel="bookmark">The Inside Secrets Of Millionaires Under The Age Of
-                            29</a></h2>
-
-                        <div class="entry-content">
-                            <p>One of the things I have found myself needing over and over again as I design websites is “dummy text” or “filler text”, that looks like real content, that I can use to fill up a page so it gives the client the feel of a finished
-                                page, text and all. Filler text matters because […]</p>
-                        </div>
-                        <!-- .entry-content -->
-                        <footer class="entry-footer"><span class="cat-links">Posted in: <a
-                                href="https://demo.themeisle.com/islemag/category/technology/" rel="category tag">Technology</a></span><span class="tags-links">Tagged: <a href="https://demo.themeisle.com/islemag/tag/ocean/"
-                                                                                                                                                                           rel="tag">Ocean</a>, <a
-                                href="https://demo.themeisle.com/islemag/tag/water/" rel="tag">Water</a></span><span class="comments-link"><a
-                                href="https://demo.themeisle.com/islemag/2015/12/17/rationem-everti/#respond">Leave a comment</a></span><a href="https://demo.themeisle.com/islemag/author/codeinwp/" title="themeisle" class="vcard author"><strong class="fn">themeisle</strong></a>
-
-                            <time
-                                    class="date updated published" datetime="2015-12-17T07:59:57+00:00">December 17, 2015</time>
-                        </footer>
-                    </article>
+                    {/dede:list}
                 </div>
-                <!-- End .islemag-content-left -->
+
                 <aside class="col-md-3 sidebar islemag-content-right" role="complementary">
                     <div id="st_latest_posts_widget-3" class="widget widget_st_latest_posts_widget">
                         <h3 class="title-border dkgreen title-bg-line"><span>Latest Posts</span></h3>
