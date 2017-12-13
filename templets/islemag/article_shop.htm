@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>10 Reasons To Start Your Own, Profitable Website! - Islemag</title>
+    <title>{dede:field.title/}_{dede:field.typename/}_{dede:global.cfg_webname/}</title>
     <script type="text/javascript">
         window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/20206-presscdn-pagely.netdna-ssl.com\/islemag\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.1"}};
         !function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56794,8205,9794,65039],[55358,56794,8203,9794,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -139,7 +139,7 @@
                                     阅读：<a class="entry-comments">
                                         <script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script></a>
                                     <span class="entry-separator">/</span>
-                                    编辑：<a href="https://demo.themeisle.com/islemag/author/codeinwp/" class="entry-author">{dede:field.writer/}</a>
+                                    来源：<a href="{dede:global.cfg_basehost/}" class="entry-author">{dede:field.source/}</a>
                                     <time class="date updated published"
                                           datetime="2016-04-20T14:06:50+00:00">April 20, 2016
                                     </time>
@@ -147,139 +147,51 @@
 
                                 <div class="about-author author vcard clearfix
 					">
-                                    <h3 class="title-underblock custom">作者: <a href="{dede:global.cfg_basehost/}" class="fn">{dede:field.writer/}</a></h3>
+                                    <h3 class="title-underblock custom">关于: <a href="{dede:global.cfg_basehost/}" class="fn">{dede:global.cfg_webname/}</a></h3>
                                     <figure class="pull-left">
-                                        <img alt='' src='picture/3d2f1a042f164214abc8276e81646566.gif' srcset='https://secure.gravatar.com/avatar/e4ff38a46c89594a6a33e30a992186af?s=96&#038;r=g 2x' class='avatar avatar-96 photo' height='96' width='96' />
+                                        <img alt='' src='{dede:global.cfg_templets_skin/}/img/logo2.png' class='avatar avatar-96 photo' height='96' width='96' />
                                     </figure>
                                     <div class="author-content">
-                                        <p>One day, all websites in the world will be powered by WordPress, at least that&#8217;s our dream. But the funny thing is that the web really is shifting towards this scenario. Our goal is to give those websites easy-to-use themes and designs that can be managed by everyone.</p>
+                                        <p>{dede:global.cfg_description/}</p>
                                     </div>
                                 </div>
                             </article>
 
                             <h3 class="mb30 title-underblock custom blog-related-carousel-title
-						">相关阅读</h3>
+						">推荐阅读</h3>
                             <div class="blog-related-carousel owl-carousel small-nav">
+                                {dede:arclist flag='c' titlelen=42 row=6}
                                 <article class="entry entry-box">
                                     <div class="entry-media">
                                         <div class="entry-media">
                                             <figure>
-                                                <a href="https://demo.themeisle.com/islemag/2016/04/20/2336/">
-                                                    <img class="owl-lazy" data-src="picture/o_19slkofl0rpq1o8qehicen12mi7_new_m97sjb.jpg" />									</a>
+                                                <a href="[field:arcurl/]">
+                                                    <img class="owl-lazy" data-src="[field:litpic/]" alt="[field:title/]" /></a>
                                             </figure>
-                                        </div><!-- End .entry-media -->
-                                    </div><!-- End .entry-media -->
+                                        </div>
+                                    </div>
 
                                     <div class="entry-content-wrapper">
-                                        <span class="entry-date">20								<span>APR</span></span>
-                                        <h2 class="entry-title"><a href="https://demo.themeisle.com/islemag/2016/04/20/2336/">How to Fight Lex Luthor Using Only iPhone</a>
+                                        <span class="entry-date">[field:pubdate function='MyDate("d",@me)'/]<span>[field:pubdate function='MyDate("y-m",@me)'/]</span></span>
+                                        <h2 class="entry-title"><a href="[field:arcurl/]">[field:title/]</a>
                                         </h2>
                                         <div class="entry-content">
-                                            <p>One of the things I have found myself needing over and over again as I design websites is "dummy text" or "filler text", that looks like...</p>
-                                        </div><!-- End .entry-content -->
-                                    </div><!-- End .entry-content-wrapper -->
+                                            <p>[field:description function='cn_substr(@me,80)'/]...</p>
+                                        </div>
+                                    </div>
 
                                     <footer class="entry-footer clearfix">
-														<span class="entry-cats">
-								<span class="entry-label"><i class="fa fa-tag"></i></span>
-								<a href="https://demo.themeisle.com/islemag/category/business/">Business</a>								</span><!-- End .entry-tags -->
-
-                                        <a href="https://demo.themeisle.com/islemag/2016/04/20/2336/"
-                                           class="entry-readmore text-right">Read More<i
-                                                    class="fa fa-angle-right"></i></a>
+									    <span class="entry-cats">
+								            <span class="entry-label"><i class="fa fa-tag"></i></span><a href="[field:typeurl/]">[field:typename/]</a>
+                                        </span>
+                                        <a href="[field:arcurl/]" class="entry-readmore text-right">更多<i class="fa fa-angle-right"></i></a>
                                     </footer>
                                 </article>
-                                <article class="entry entry-box">
-                                    <div class="entry-media">
-                                        <div class="entry-media">
-                                            <figure>
-                                                <a href="https://demo.themeisle.com/islemag/2016/04/20/the-perfect-camouflage/">
-                                                    <img class="owl-lazy" data-src="picture/image_kqnauf.jpg" />									</a>
-                                            </figure>
-                                        </div><!-- End .entry-media -->
-                                    </div><!-- End .entry-media -->
-
-                                    <div class="entry-content-wrapper">
-                                        <span class="entry-date">20								<span>APR</span></span>
-                                        <h2 class="entry-title"><a href="https://demo.themeisle.com/islemag/2016/04/20/the-perfect-camouflage/">20 Ways To Sell Your Product Faster</a>
-                                        </h2>
-                                        <div class="entry-content">
-                                            <p>One of the things I have found myself needing over and over again as I design websites is "dummy text" or "filler text", that looks like...</p>
-                                        </div><!-- End .entry-content -->
-                                    </div><!-- End .entry-content-wrapper -->
-
-                                    <footer class="entry-footer clearfix">
-														<span class="entry-cats">
-								<span class="entry-label"><i class="fa fa-tag"></i></span>
-								<a href="https://demo.themeisle.com/islemag/category/business/">Business</a>								</span><!-- End .entry-tags -->
-
-                                        <a href="https://demo.themeisle.com/islemag/2016/04/20/the-perfect-camouflage/"
-                                           class="entry-readmore text-right">Read More<i
-                                                    class="fa fa-angle-right"></i></a>
-                                    </footer>
-                                </article>
-                                <article class="entry entry-box">
-                                    <div class="entry-media">
-                                        <div class="entry-media">
-                                            <figure>
-                                                <a href="https://demo.themeisle.com/islemag/2014/05/24/discover-3-simple-ways-to-reduce-your-unwanted-wrinkles/">
-                                                    <img class="owl-lazy" data-src="picture/coins-currency-investment-insurance-cash-banking_jiyvwh.jpg" />									</a>
-                                            </figure>
-                                        </div><!-- End .entry-media -->
-                                    </div><!-- End .entry-media -->
-
-                                    <div class="entry-content-wrapper">
-                                        <span class="entry-date">24								<span>MAY</span></span>
-                                        <h2 class="entry-title"><a href="https://demo.themeisle.com/islemag/2014/05/24/discover-3-simple-ways-to-reduce-your-unwanted-wrinkles/">Time Sensitive! 5 Ways To Reduce Your Taxes</a>
-                                        </h2>
-                                        <div class="entry-content">
-                                            <p>One of the things I have found myself needing over and over again as I design websites is "dummy text" or "filler text", that looks like...</p>
-                                        </div><!-- End .entry-content -->
-                                    </div><!-- End .entry-content-wrapper -->
-
-                                    <footer class="entry-footer clearfix">
-														<span class="entry-cats">
-								<span class="entry-label"><i class="fa fa-tag"></i></span>
-								<a href="https://demo.themeisle.com/islemag/category/business/">Business</a>								</span><!-- End .entry-tags -->
-
-                                        <a href="https://demo.themeisle.com/islemag/2014/05/24/discover-3-simple-ways-to-reduce-your-unwanted-wrinkles/"
-                                           class="entry-readmore text-right">Read More<i
-                                                    class="fa fa-angle-right"></i></a>
-                                    </footer>
-                                </article>
-                                <article class="entry entry-box">
-                                    <div class="entry-media">
-                                        <div class="entry-media">
-                                            <figure>
-                                                <a href="https://demo.themeisle.com/islemag/2014/04/24/unlock-the-secrets-of-selling-high-ticket-items/">
-                                                    <img class="owl-lazy" data-src="picture/image-1_vcrndb.jpg" />									</a>
-                                            </figure>
-                                        </div><!-- End .entry-media -->
-                                    </div><!-- End .entry-media -->
-
-                                    <div class="entry-content-wrapper">
-                                        <span class="entry-date">24								<span>APR</span></span>
-                                        <h2 class="entry-title"><a href="https://demo.themeisle.com/islemag/2014/04/24/unlock-the-secrets-of-selling-high-ticket-items/">The Secrets Of Rich And Famous Writers</a>
-                                        </h2>
-                                        <div class="entry-content">
-                                            <p>One of the things I have found myself needing over and over again as I design websites is "dummy text" or "filler text", that looks like...</p>
-                                        </div><!-- End .entry-content -->
-                                    </div><!-- End .entry-content-wrapper -->
-
-                                    <footer class="entry-footer clearfix">
-														<span class="entry-cats">
-								<span class="entry-label"><i class="fa fa-tag"></i></span>
-								<a href="https://demo.themeisle.com/islemag/category/business/">Business</a>								</span><!-- End .entry-tags -->
-
-                                        <a href="https://demo.themeisle.com/islemag/2014/04/24/unlock-the-secrets-of-selling-high-ticket-items/"
-                                           class="entry-readmore text-right">Read More<i
-                                                    class="fa fa-angle-right"></i></a>
-                                    </footer>
-                                </article>
-                            </div><!-- End .blog-related-carousel -->
-                        </div><!-- End .col-md-12 -->
-                    </div><!-- End .row -->
-                    <div class="mb20"></div><!-- space -->
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb20"></div>
 
                     <div id="comments" class="comments-area">
                         <div id="respond" class="comment-respond">
@@ -326,38 +238,12 @@
                 </main>
             </div>
         </div>
-
-
-
-        <aside
-                class="col-md-3 sidebar islemag-content-right"role="complementary">
-            <div id="st_latest_posts_widget-3" class="widget widget_st_latest_posts_widget"><h3 class="title-border dkgreen title-bg-line"><span>Latest Posts</span></h3><div class="sp-latest-posts-widget latest-posts"><div class="media"><div class="pull-left"><a href="https://demo.themeisle.com/islemag/2016/05/11/roofs-pitches-trusses-framing/"><img width="64" height="64" src="picture/12388071_1065320530185431_2076280306_n_g93ygx.jpg" class="img-responsive wp-post-image" alt="" /></a></div><div class="media-body"><h3 class="entry-title"><a href="https://demo.themeisle.com/islemag/2016/05/11/roofs-pitches-trusses-framing/">All About Roofs: Pitches, Trusses and Framing</a></h3><div class="entry-meta small"><span class="st-lp-time">9:21 am</span> <span clss="st-lp-date">11 May 2016</span></div></div></div><div class="media"><div class="pull-left"><a href="https://demo.themeisle.com/islemag/2016/05/10/red-carhow-relax-40-ways-relax-5-minutes-less/"><img width="64" height="64" src="picture/12168431_1036060226444795_851404817_o_z1lzd7.jpg" class="img-responsive wp-post-image" alt="" /></a></div><div class="media-body"><h3 class="entry-title"><a href="https://demo.themeisle.com/islemag/2016/05/10/red-carhow-relax-40-ways-relax-5-minutes-less/">Red CarHow to Relax: 40 Ways to Relax in 5 Minutes or Less</a></h3><div class="entry-meta small"><span class="st-lp-time">9:23 am</span> <span clss="st-lp-date">10 May 2016</span></div></div></div><div class="media"><div class="pull-left"><a href="https://demo.themeisle.com/islemag/2016/04/20/amsterdam-at-night/"><img width="64" height="64" src="picture/rsz_125354711251_c9c3bd082e_o-64x64.jpg" class="img-responsive wp-post-image" alt="" srcset="https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-64x64.jpg 64w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-150x150.jpg 150w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-300x294.jpg 300w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-768x752.jpg 768w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-250x250.jpg 250w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-125x125.jpg 125w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-110x108.jpg 110w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-420x411.jpg 420w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-439x430.jpg 439w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-50x50.jpg 50w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o.jpg 849w" sizes="(max-width: 64px) 100vw, 64px" /></a></div><div class="media-body"><h3 class="entry-title"><a href="https://demo.themeisle.com/islemag/2016/04/20/amsterdam-at-night/">How Green Windows Can Keep You Out of Trouble</a></h3><div class="entry-meta small"><span class="st-lp-time">2:10 pm</span> <span clss="st-lp-date">20 Apr 2016</span></div></div></div></div></div><div id="islemag_multiple_ads-widget-3" class="widget islemag_multiple_ads"><h3 class="title-border dkgreen title-bg-line"><span>Small Banners</span></h3><div class="islemag-small-banner"> <img src="picture/125.png" alt=""/></div><div class="islemag-small-banner"> <img src="picture/125.png" alt=""/></div><div class="islemag-small-banner"> <img src="picture/125.png" alt=""/></div><div class="islemag-small-banner"> <img src="picture/125.png" alt=""/></div></div><div id="text-2" class="widget widget_text"><h3 class="title-border dkgreen title-bg-line"><span>Instagram Feed</span></h3>			<div class="textwidget"><div id="sb_instagram" class="sbi sbi_col_4" style="width:100%; padding-bottom: 10px; " data-id="197494599" data-num="12" data-res="auto" data-cols="4" data-options='{&quot;sortby&quot;: &quot;none&quot;, &quot;showbio&quot;: &quot;true&quot;, &quot;headercolor&quot;: &quot;ffffff&quot;, &quot;imagepadding&quot;: &quot;5&quot;}'><div class="sb_instagram_header" style="padding: 10px; padding-bottom: 0;"></div><div id="sbi_images" style="padding: 5px;"><div class="sbi_loader fa-spin"></div></div><div id="sbi_load"></div></div></div>
-            </div><div id="tag_cloud-3" class="widget widget_tag_cloud"><h3 class="title-border dkgreen title-bg-line"><span>TagCloud</span></h3><div class="tagcloud"><a href="https://demo.themeisle.com/islemag/category/beauty/" class="tag-cloud-link tag-link-40 tag-link-position-1" style="font-size: 15.466666666667pt;" aria-label="Beauty (5 items)">Beauty</a>
-                    <a href="https://demo.themeisle.com/islemag/category/business/" class="tag-cloud-link tag-link-7 tag-link-position-2" style="font-size: 15.466666666667pt;" aria-label="Business (5 items)">Business</a>
-                    <a href="https://demo.themeisle.com/islemag/category/reviews/" class="tag-cloud-link tag-link-244 tag-link-position-3" style="font-size: 22pt;" aria-label="Reviews (6 items)">Reviews</a>
-                    <a href="https://demo.themeisle.com/islemag/category/technology/" class="tag-cloud-link tag-link-8 tag-link-position-4" style="font-size: 8pt;" aria-label="Technology (4 items)">Technology</a>
-                    <a href="https://demo.themeisle.com/islemag/category/travel/" class="tag-cloud-link tag-link-1 tag-link-position-5" style="font-size: 22pt;" aria-label="Travel (6 items)">Travel</a></div>
-            </div><div id="islemag_single_ad-widget-3" class="widget islemag_single_ad"><h3 class="title-border dkgreen title-bg-line"><span>Large Banner</span></h3><div class="islemag-ad-banner-content"><a href="https://themeisle.com" target=""><img src="picture/240x400.png" alt="large_banner"/></a></div></div><div id="categories-2" class="widget widget_categories"><h3 class="title-border dkgreen title-bg-line"><span>Categories</span></h3>		<ul>
-                    <li class="cat-item cat-item-40"><a href="https://demo.themeisle.com/islemag/category/beauty/" >Beauty</a> (5)
-                    </li>
-                    <li class="cat-item cat-item-7"><a href="https://demo.themeisle.com/islemag/category/business/" >Business</a> (5)
-                    </li>
-                    <li class="cat-item cat-item-244"><a href="https://demo.themeisle.com/islemag/category/reviews/" >Reviews</a> (6)
-                    </li>
-                    <li class="cat-item cat-item-8"><a href="https://demo.themeisle.com/islemag/category/technology/" >Technology</a> (4)
-                    </li>
-                    <li class="cat-item cat-item-1"><a href="https://demo.themeisle.com/islemag/category/travel/" >Travel</a> (6)
-                    </li>
-                </ul>
-            </div></aside><!-- #secondary -->
-
-    </div><!-- #content -->
+        {dede:include filename="right.htm"/}
+    </div>
 
     {dede:include filename="footer.htm"/}
 
-</div><!-- #page -->
-</div><!-- End #wrapper -->
-<!--facebook like and share js -->
+</div>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -534,37 +420,37 @@
     }
 </style>
 
-<link rel='stylesheet' id='pirate_forms_front_styles-css'  href='css/front.css' type='text/css' media='all' />
-<script type='text/javascript' src='js/islemag-wigdet.js'></script>
+<link rel='stylesheet' id='pirate_forms_front_styles-css'  href='{dede:global.cfg_templets_skin/}/css/front.css' type='text/css' media='all' />
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/islemag-wigdet.js'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var sb_instagram_js_options = {"sb_instagram_at":"197494599.1677ed0.f135cfbe0c954ed68340eb63833f1fd7"};
     /* ]]> */
 </script>
-<script type='text/javascript' src='js/sb-instagram.min.js'></script>
-<script type='text/javascript' src='js/core.min.js'></script>
-<script type='text/javascript' src='js/modernizr.custom.min.js'></script>
-<script type='text/javascript' src='js/jquery.shuffle.min.js'></script>
-<script type='text/javascript' src='js/random-shuffle-min.js'></script>
-<script type='text/javascript' src='js/custom.js'></script>
-<script type='text/javascript' src='js/script.single.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/sb-instagram.min.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/core.min.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/modernizr.custom.min.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/jquery.shuffle.min.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/random-shuffle-min.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/custom.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/script.single.js'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
     var stickyMenu = {"disable_sticky":"1"};
     /* ]]> */
 </script>
-<script type='text/javascript' src='js/script.all.js'></script>
-<script type='text/javascript' src='js/owl.carousel.min.js'></script>
-<script type='text/javascript' src='js/comment-reply.min.js'></script>
-<script type='text/javascript' src='js/wp-embed.min.js'></script>
-<script type='text/javascript' src='js/scripts.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/script.all.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/owl.carousel.min.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/comment-reply.min.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/wp-embed.min.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/scripts.js'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var pirateFormsObject = {"errors":"","spam":{"label":"I'm human!","value":"b8f5bd9eb9"}};
     /* ]]> */
 </script>
-<script type='text/javascript' src='js/scripts-general.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/js/scripts-general.js'></script>
 
 </body>
 </html>

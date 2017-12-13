@@ -42,3 +42,4 @@ advancedsearch.htm,高级搜索模板
 singlepage.htm,单独页面模板
 tag.htm,标签首页模板
 taglist.htm,特定标签内容列表模板
+right.htm,页面公用右侧模板
