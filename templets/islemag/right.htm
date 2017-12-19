@@ -1,58 +1,23 @@
 <aside class="col-md-3 sidebar islemag-content-right" role="complementary">
     <div id="st_latest_posts_widget-3" class="widget widget_st_latest_posts_widget">
-        <h3 class="title-border dkgreen title-bg-line"><span>最后更新</span></h3>
+        <h3 class="title-border dkgreen title-bg-line"><span>最新发布</span></h3>
 
         <div class="sp-latest-posts-widget latest-posts">
+            {dede:arclist row=3 titlelen=45 noflag='h'}
             <div class="media">
                 <div class="pull-left">
-                    <a href="https://demo.themeisle.com/islemag/2016/05/11/roofs-pitches-trusses-framing/">
-                        <img width="64" height="64" src="picture/12388071_1065320530185431_2076280306_n_g93ygx.jpg"
-                             class="img-responsive wp-post-image" alt=""/>
+                    <a href="[field:arcurl/]" target="_blank">
+                        <img width="64" height="64" src="[field:litpic/]" class="img-responsive wp-post-image" alt="[field:title/]"/>
                     </a>
                 </div>
                 <div class="media-body">
-                    <h3 class="entry-title"><a
-                            href="https://demo.themeisle.com/islemag/2016/05/11/roofs-pitches-trusses-framing/">All
-                        About Roofs: Pitches, Trusses and Framing</a></h3>
-
-                    <div class="entry-meta small"><span class="st-lp-time">9:21 am</span> <span clss="st-lp-date">11 May 2016</span>
+                    <h3 class="entry-title"><a href="[field:arcurl/]">[field:title/]</a>
+                    </h3>
+                    <div class="entry-meta small"><span clss="st-lp-date">[field:pubdate function="MyDate('Y-m-d', @me)"/]</span> <span class="st-lp-time">[field:pubdate function="MyDate('h:i', @me)"/]</span>
                     </div>
                 </div>
             </div>
-            <div class="media">
-                <div class="pull-left">
-                    <a href="https://demo.themeisle.com/islemag/2016/05/10/red-carhow-relax-40-ways-relax-5-minutes-less/">
-                        <img width="64" height="64" src="picture/12168431_1036060226444795_851404817_o_z1lzd7.jpg"
-                             class="img-responsive wp-post-image" alt=""/>
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h3 class="entry-title"><a
-                            href="https://demo.themeisle.com/islemag/2016/05/10/red-carhow-relax-40-ways-relax-5-minutes-less/">Red
-                        CarHow to Relax: 40 Ways to Relax in 5 Minutes or Less</a></h3>
-
-                    <div class="entry-meta small"><span class="st-lp-time">9:23 am</span> <span clss="st-lp-date">10 May 2016</span>
-                    </div>
-                </div>
-            </div>
-            <div class="media">
-                <div class="pull-left">
-                    <a href="https://demo.themeisle.com/islemag/2016/04/20/amsterdam-at-night/">
-                        <img width="64" height="64" src="picture/rsz_125354711251_c9c3bd082e_o-64x64.jpg"
-                             class="img-responsive wp-post-image" alt=""
-                             srcset="https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-64x64.jpg 64w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-150x150.jpg 150w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-300x294.jpg 300w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-768x752.jpg 768w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-250x250.jpg 250w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-125x125.jpg 125w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-110x108.jpg 110w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-420x411.jpg 420w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-439x430.jpg 439w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o-50x50.jpg 50w, https://20206-presscdn-pagely.netdna-ssl.com/islemag/wp-content/uploads/sites/67/2016/04/rsz_125354711251_c9c3bd082e_o.jpg 849w"
-                             sizes="(max-width: 64px) 100vw, 64px"/>
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h3 class="entry-title"><a
-                            href="https://demo.themeisle.com/islemag/2016/04/20/amsterdam-at-night/">How
-                        Green Windows Can Keep You Out of Trouble</a></h3>
-
-                    <div class="entry-meta small"><span class="st-lp-time">2:10 pm</span> <span clss="st-lp-date">20 Apr 2016</span>
-                    </div>
-                </div>
-            </div>
+            {/dede:arclist}
         </div>
     </div>
     <div id="islemag_multiple_ads-widget-3" class="widget islemag_multiple_ads">
@@ -88,25 +53,12 @@
         </div>
     </div>
     <div id="tag_cloud-3" class="widget widget_tag_cloud">
-        <h3 class="title-border dkgreen title-bg-line"><span>热门标签</span></h3>
+        <h3 class="title-border dkgreen title-bg-line"><span>推荐标签</span></h3>
 
-        <div class="tagcloud"><a href="https://demo.themeisle.com/islemag/category/beauty/"
-                                 class="tag-cloud-link tag-link-40 tag-link-position-1"
-                                 style="font-size: 15.466666666667pt;" aria-label="Beauty (5 items)">Beauty</a>
-            <a href="https://demo.themeisle.com/islemag/category/business/"
-               class="tag-cloud-link tag-link-7 tag-link-position-2" style="font-size: 15.466666666667pt;"
-               aria-label="Business (5 items)">Business</a>
-            <a href="https://demo.themeisle.com/islemag/category/reviews/"
-               class="tag-cloud-link tag-link-244 tag-link-position-3"
-               style="font-size: 22pt;" aria-label="Reviews (6 items)">Reviews</a>
-            <a href="https://demo.themeisle.com/islemag/category/technology/"
-               class="tag-cloud-link tag-link-8 tag-link-position-4" style="font-size: 8pt;"
-               aria-label="Technology (4 items)">Technology</a>
-
-            <a
-                    href="https://demo.themeisle.com/islemag/category/travel/"
-                    class="tag-cloud-link tag-link-1 tag-link-position-5" style="font-size: 22pt;"
-                    aria-label="Travel (6 items)">Travel</a>
+        <div class="tagcloud">
+            {dede:tag sort='rand' row='10' getall='0'}
+            <a href="[field:link/]" class="tag-cloud-link tag-link-40 tag-link-position-1" style="font-size: 15.466666666667pt;" aria-label="[field:count/] 篇文章">[field:tag /]</a>
+            {/dede:tag}
         </div>
     </div>
     <div id="islemag_single_ad-widget-3" class="widget islemag_single_ad">
