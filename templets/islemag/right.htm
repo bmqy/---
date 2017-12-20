@@ -65,29 +65,24 @@
         <h3 class="title-border dkgreen title-bg-line"><span>广告推荐</span></h3>
 
         <div class="islemag-ad-banner-content">
-            <a href="https://themeisle.com" target="">
-                <img src="picture/240x400.png" alt="large_banner"/>
-            </a>
+            {dede:myad name='indexRtpicAd3'/}
         </div>
     </div>
     <div id="categories-2" class="widget widget_categories">
         <h3 class="title-border dkgreen title-bg-line"><span>全部分类</span></h3>
 
         <ul>
-            <li class="cat-item cat-item-40"><a href="https://demo.themeisle.com/islemag/category/beauty/">Beauty</a>
-                (5)
+            {dede:channelartlist typeid='top'}
             </li>
-            <li class="cat-item cat-item-7"><a href="https://demo.themeisle.com/islemag/category/business/">Business</a>
-                (5)
+            <li class="cat-item cat-item-{dede:field name='id'/}">
+                <a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+                <ul class="subitem">
+                    {dede:channel type='son' noself='yes'}
+                    <a href="[field:typelink/]">[field:typename/]</a>
+                    {/dede:channel}
+                </ul>
             </li>
-            <li class="cat-item cat-item-244"><a href="https://demo.themeisle.com/islemag/category/reviews/">Reviews</a>
-                (6)
-            </li>
-            <li class="cat-item cat-item-8 current-cat"><a
-                    href="https://demo.themeisle.com/islemag/category/technology/">Technology</a> (4)
-            </li>
-            <li class="cat-item cat-item-1"><a href="https://demo.themeisle.com/islemag/category/travel/">Travel</a> (6)
-            </li>
+            {/dede:channelartlist}
         </ul>
     </div>
 </aside>
