@@ -16,9 +16,8 @@
                     <a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>
                     <div class="menu-top-navbar-container">
                         <ul id="primary-menu" class="nav-menu">
-                            <li id="menu-item-3502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3502"><a href="https://demo.themeisle.com/islemag/faq/">问答</a></li>
-                            <li id="menu-item-255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a href="https://demo.themeisle.com/islemag/contact/">留言</a></li>
-                            <li id="menu-item-3501" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3501"><a href="https://demo.themeisle.com/islemag/advertisement/">关于</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{dede:global.cfg_memberurl/}/login.php">登录</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&dopost=regnew">注册</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -43,7 +42,9 @@
 
         <div class="col-md-9 col-sm-9 col-xs-12 islemag-banner">
             <div id="islemag_content_ad-widget-3" class="widget islemag_content_ad">
-                <div class="islemag-ad-banner-content"><a href="https://www.themeisle.com" target="_blank"><img src="{dede:global.cfg_templets_skin/}/img/banner_placeholder.png"/></a></div>
+                <div class="islemag-ad-banner-content">
+                    {dede:myad name='indexfooterAD'/}
+                </div>
             </div>
         </div>
     </div>
@@ -57,12 +58,9 @@
                     <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home">
                         <a href="{dede:global.cfg_basehost/}"><i class="_mi dashicons dashicons-admin-home" aria-hidden="true" style="font-size:2em;"></i><span class="visuallyhidden">首页</span></a>
                     </li>
-
-                    {dede:channelartlist typeid='top' currentstyle='current-menu-item' }
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category {dede:field.currentstyle/}">
-                        <a href="{dede:field name='typeurl'/}" {dede:field name='rel'/}>{dede:field name='typename'/}</a>
-                    </li>
-                    {/dede:channelartlist}
+                    {dede:channel type='top' row='10' currentstyle="<li class='menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>"}
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href='[field:typeurl/]' [field:rel/]><span>[field:typename/]</span></a></li>
+                    {/dede:channel}
                 </ul>
             </div>
         </nav>

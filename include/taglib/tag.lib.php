@@ -83,9 +83,8 @@ function lib_tag(&$ctag,&$refObj)
     while($row = $dsql->GetArray())
     {
         $row['keyword'] = $row['tag'];
-        $row['tag'] = htmlspecialchars($row['tag']);
+        $row['tag'] = dede_htmlspecialchars($row['tag']);
         $row['link'] = $cfg_cmsurl."/tags.php?/".urlencode($row['keyword'])."/";
-        $count = $dsql->GetOne("Select count(tid) From `dede_taglist` where tag = '".$row['tag']."'");$row['count'] = $count['count(tid)'];
         $row['highlight'] = 0;
         if($row['monthcc']>1000 || $row['weekcc']>300 )
         {

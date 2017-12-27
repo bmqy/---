@@ -120,13 +120,17 @@ class DedeTagParse
         {
             $this->IsCache = FALSE;
         }
+        if ( DEDE_ENVIRONMENT == 'development' )
+        {
+            $this->IsCache = FALSE;
+        }
         $this->NameSpace = 'dede';
         $this->TagStartWord = '{';
         $this->TagEndWord = '}';
         $this->TagMaxLen = 64;
         $this->CharToLow = TRUE;
         $this->SourceString = '';
-        $this->CTags = Array();
+        $this->CTags = array();
         $this->Count = -1;
         $this->TempMkTime = 0;
         $this->CacheFile = '';
@@ -162,7 +166,7 @@ class DedeTagParse
     function SetDefault()
     {
         $this->SourceString = '';
-        $this->CTags = '';
+        $this->CTags = array();
         $this->Count=-1;
     }
     
@@ -1145,6 +1149,7 @@ class DedeAttributeParse
         $ddtag = '';
         $hasAttribute=FALSE;
         $strLen = strlen($this->sourceString);
+        $this->cAttributes->Items = array();
 
         // 获得Tag的名称，解析到 cAtt->GetAtt('tagname') 中
         for($i=0; $i<$strLen; $i++)
