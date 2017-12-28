@@ -164,13 +164,8 @@
                         <div class="post-section islemag-template2">
                             <div class="row">
                                 {dede:arclist row='6' titlelen='32' orderby='lastpost'}
-                                [field:id runphp='yes']
-                                if(@me%2 == 0){
-                                    @me = 'yes';
-                                }
-                                [/field:id]
                                 <div class="col-sm-6">
-                                    <article class="entry entry-overlay entry-block eb-small light_red">
+                                    <article class="entry entry-overlay entry-block eb-small [field:id runphp='yes']@me%2 == 0 ? @me='blue' : @me='purple';[/field:id]">
                                         <div class="entry-media">
                                             <a href="[field:typeurl/]" class="category-block" target="_blank" title="[field:typename/]">[field:typename/]</a>
                                             <figure>
