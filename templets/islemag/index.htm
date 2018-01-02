@@ -222,7 +222,7 @@
                                 <div class="entry-wrapperv2">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            {dede:arclist flag='b' row='6' limit='0,1' titlelen='32' orderby='lastpost'}
+                                            {dede:arclist flag='b' row='6' limit='0,1' titlelen='32' infolen='230' orderby='lastpost'}
                                             <article class="entry entry-overlay entry-block red">
                                                 <a href="[field:typeurl/]" target="_blank" class="category-block" title="[field:typename/]">[field:typename/]</a>
                                                 <div class="entry-media islemag-big">
@@ -238,7 +238,7 @@
                                                     </div>
                                                 </div>
                                                 <h3 class="entry-title"><a href="[field:arturl/]">[field:title/]</a></h3>
-                                                <p>[field:description function="cn_substr(@me, 300)"/]...</p>
+                                                <p>[field:infos/]...</p>
                                             </article>
                                             {/dede:arclist}
                                         </div>
@@ -276,8 +276,8 @@
                         </h2>
                         <div class="post-section islemag-template4 mb30">
                             <div class="owl-carousel islemag-template4-posts smaller-nav no-radius">
+                                {dede:arclist flag='j' row='4' titlelen='32' orderby='lastpost'}
                                 <div class="entry-wrapper">
-                                    {dede:arclist flag='j' row='4' limit='1,5' titlelen='32' orderby='lastpost'}
                                     <article class="entry entry-overlay entry-block eb-small  [field:id runphp='yes']$colors = Array('orange','pink','light_red','blue','green','purple');@me=$colors[@me%5];[/field:id]">
 
                                         <div class="entry-media">
@@ -289,7 +289,7 @@
                                             </figure>
                                         </div>
 
-                                        <h3 class="entry-title"><a href="[field:arturl/]" target="_blank">[field:title/]</a></h3>
+                                        <h3 class="entry-title"><a href="[field:arturl/]" target="_blank">[field:title/][field:count/]</a></h3>
                                         <div class="entry-meta">
                                             <span class="entry-overlay-date"><i class="fa fa-calendar"></i>[field:pubdate function="MyDate('m-d',@me)"/]</span>
                                             <span class="entry-separator">/</span>
@@ -298,8 +298,8 @@
                                             </div>
                                         </div>
                                     </article>
-                                    {/dede:arclist}
                                 </div>
+                                {/dede:arclist}
                             </div>
                         </div>
                     </div>
